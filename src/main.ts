@@ -26,7 +26,7 @@ const drawCard = (card: Card) => {
     // console.log(numOfKingsUsed);
     remainingCards.innerHTML = String(deck.length);
     numKings.innerHTML = String(numOfKingsUsed);
-    cardImg?.setAttribute("src", `public/cards/${card.suit}/${card.value}.svg`);
+    cardImg?.setAttribute("src", `/cards/${card.suit}/${card.value}.svg`);
     animate(
       cardImg,
       { transform: ["rotate(360deg)", "none"] },
