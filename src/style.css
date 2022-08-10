@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "roboto_condensedbold";
+  src: url("fonts/robotocondensed-bold-webfont.woff2") format("woff2"),
+    url("fonts/robotocondensed-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "roboto_condensedbold";
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 60em;
+  margin: 2em auto 0 auto;
+}
+
+.gameTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#crownIcon {
+  width: 3em;
+}
+
+.title {
+  color: #ff944e;
+  font-size: 3em;
+  margin: 0;
+}
+
+.kingsDrawn,
+.cardsRemaining {
+  color: #ff944e;
+  font-size: 2em;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 30em;
+}
+
+img[src=""] {
+  opacity: 0;
+  /* transform: rotateY(180deg); */
+}
+
+#card {
+  height: 20em;
+  width: 13.8em;
+  margin-bottom: 2em;
+  border: 15px solid #ff944e;
+  border-radius: 25px;
+}
+
+.button {
+  background: #ff7544;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 8px;
+  font-family: "roboto_condensedbold";
+}
+
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  background: #ff944e;
+  transform: translateY(-6px);
+  color: #e1200b;
+  font-family: "roboto_condensedbold";
+  font-size: 2em;
+}
+
+.button:active .front {
+  transform: translateY(-2px);
+}
