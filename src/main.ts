@@ -1,19 +1,27 @@
 import "./style.css";
 import { deck, pickCard, numOfKingsUsed, newDeck } from "./Deck";
 import { animate, spring } from "motion";
+import { Card } from "./Card";
 
 const cardImg = document.querySelector("#card")!;
 const newCard = document.querySelector("#newCard");
-const numKings = document.querySelector('#numKings')!;
-const remainingCards = document.querySelector('#remainingCards')!;
-const newGame = document.querySelector('#newGame');
+const numKings = document.querySelector("#numKings")!;
+const remainingCards = document.querySelector("#remainingCards")!;
+const newGame = document.querySelector("#newGame");
 
 newGame?.addEventListener("click", () => {
   newDeck();
+  numKings.innerHTML = String(0);
+  remainingCards.innerHTML = String(52);
+  cardImg.setAttribute("src", "");
+  drawCard(pickCard());
 });
 
 newCard?.addEventListener("click", () => {
-  const card = pickCard();
+  drawCard(pickCard());
+});
+
+const drawCard = (card: Card) => {
   if (card) {
     // console.log(numOfKingsUsed);
     remainingCards.innerHTML = String(deck.length);
@@ -27,4 +35,6 @@ newCard?.addEventListener("click", () => {
   } else {
     console.log("out of cards");
   }
-});
+};
+
+drawCard(pickCard());

@@ -27,6 +27,7 @@ nav {
 
 #crownIcon {
   width: 3em;
+  margin-right: 1em;
 }
 
 .title {
@@ -38,7 +39,7 @@ nav {
 .kingsDrawn,
 .cardsRemaining {
   color: #ff944e;
-  font-size: 2em;
+  font-size: 1.4em;
   margin: 0;
 }
 
@@ -87,4 +88,11 @@ img[src=""] {
 
 .button:active .front {
   transform: translateY(-2px);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 }
