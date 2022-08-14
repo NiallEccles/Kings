@@ -8,6 +8,8 @@
 
 body {
   font-family: "roboto_condensedbold";
+  background: #e1200b;
+  height: 100vh;
 }
 
 nav {
@@ -31,14 +33,14 @@ nav {
 }
 
 .title {
-  color: #ff944e;
+  color: white;
   font-size: 3em;
   margin: 0;
 }
 
 .kingsDrawn,
 .cardsRemaining {
-  color: #ff944e;
+  color: white;
   font-size: 1.4em;
   margin: 0;
 }
@@ -50,6 +52,7 @@ main {
   justify-content: center;
   margin: 0 auto;
   max-width: 30em;
+  height: calc(100vh - 6em);
 }
 
 img[src=""] {
@@ -61,7 +64,7 @@ img[src=""] {
   height: 20em;
   width: 13.8em;
   margin-bottom: 2em;
-  border: 15px solid #ff944e;
+  border: 15px solid white;
   border-radius: 25px;
 }
 
@@ -81,7 +84,7 @@ img[src=""] {
   border-radius: 12px;
   background: #ff944e;
   transform: translateY(-6px);
-  color: #e1200b;
+  color: white;
   font-family: "roboto_condensedbold";
   font-size: 2em;
 }
@@ -95,4 +98,24 @@ footer {
   flex-direction: column;
   align-items: center;
   margin-top: 2em;
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    width: calc(100% - 4em);
+    margin: 2em;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  nav {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8.5em;
+    margin: 1em 0 0 0;
+    width: 100%;
+  }
+  main {
+    height: calc(100vh - 13em);
+  }
 }
