@@ -1,5 +1,5 @@
 import "./style.css";
-import { deck, pickCard, numOfKingsUsed, newDeck } from "./Deck";
+import { deck, pickCard, numOfKingsUsed, newDeck, resetKings } from "./Deck";
 import { animate, spring } from "motion";
 import { Card } from "./Card";
 
@@ -11,6 +11,7 @@ const newGame = document.querySelector("#newGame");
 
 newGame?.addEventListener("click", () => {
   newDeck();
+  resetKings();
   numKings.innerHTML = String(0);
   remainingCards.innerHTML = String(52);
   cardImg.setAttribute("src", "");

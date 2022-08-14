@@ -25,7 +25,7 @@ export const pickCard = (): Card => {
   const randomCard = deck[randomNum];
   usedCards.push(randomCard);
   console.log(randomCard);
-  if(randomCard.value === 13){
+  if (randomCard.value === 13) {
     numOfKingsUsed++;
   }
   deck.splice(randomNum, 1);
@@ -35,4 +35,8 @@ export const pickCard = (): Card => {
 export const newDeck = (): Deck => {
   deck = mkDeck();
   return deck;
-}
+};
+
+export const resetKings = (): void => {
+  numOfKingsUsed = 0;
+};
